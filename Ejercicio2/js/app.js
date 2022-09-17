@@ -6,7 +6,7 @@ app.controller('profesCtrl', function(){
 
 var profesorData = {
 	nombre: "Fernando Gutierrez",
-	bio: "Bachiller en Ingeniera de Sistemas y Full Stack Developer",
+	bio: "Hola mi nombre es Fernando, estudie en la Universidad Nacional de Mayor de San Marcos me encatan la tencología JavaScript y soyBachiller en Ingeniera de Sistemas y Full Stack Developer",
 	edad: 27,
 	foto: "img/fer.PNG"
 }

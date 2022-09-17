@@ -7,7 +7,7 @@
     <title>Ejercicio 2</title>
 
     <!-- Incluir Bootstrap -->
-    <link rel="stylesheet" href="./Ejercicio2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
         
     <!-- Incluir AngularJS -->
     <script src="./js/lib/angular.min.js"></script>
@@ -23,7 +23,7 @@
             <div class="col-sm-3">
                 <section class="panel">
                     <div class="panel-body" align="center">
-                        <img src="./img/fer.PNG" class="img-circle" alt="" width="150px" height="150px">
+                        <img ng-src="{{profe.profesor.foto}}" class="img-circle" alt="" width="150px" height="150px">
                     </div>
                 </section>
             </div>
@@ -32,10 +32,10 @@
             <div class="col-sm-9">
                 <section class="panel">
                     <div class="panel-body">
-                        hOLIDD.
+                        {{ profe.profesor.bio }}
                         <br>
                         <br>
-                        <strong>Edad:</strong> 27 años   
+                        <strong>Edad:</strong> {{ profe.profesor.edad }} años   
                     </div>
                 </section>
             </div>
