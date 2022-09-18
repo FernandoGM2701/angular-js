@@ -22,7 +22,7 @@
             <!-- Div que contiene la imagen del profesor -->
             <div class="col-sm-3">
                 <section class="panel">
-                    <div class="panel-body" align="center">
+                    <div class="panel-body">
                         <img ng-src="{{myController.data.photo}}" class="img-circle" alt="" width="150px" height="150px">
                     </div>
                 </section>
@@ -40,7 +40,22 @@
                 </section>
             </div>
     
-        </div>   
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <section class="panel">
+                    <div class="panel-bod">
+                        Nombres
+                        <input type="text" class="form-control" ng-model="myController.data.name">
+                        Edad
+                        <input type="text" class="form-control" ng-model="myController.data.age">
+                        Biografia
+                        <textarea rows="5" class="form-control" ng-model="myController.data.biography"></textarea>
+                    </div>
+                </section>
+            </div>
+        </div>
     </div>
 </body>
 </html>
