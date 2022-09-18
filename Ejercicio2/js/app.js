@@ -1,7 +1,12 @@
 var app = angular.module('nameApp',[ ]);
 
-app.controller('firstController', function(){
-    this.data = profesorData;
+app.controller('firstController', function($scope) {
+    $scope.data = profesorData;
+    $scope.inputData = {};
+
+    $scope.editData = function() {
+        angular.copy($scope.data, $scope.inputData);
+    }
 }); 
 
 var profesorData = {
