@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="fer">
+<html ng-app="nameApp">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,16 +14,16 @@
     <script src="./js/app.js"></script>
 </head>
 <body>
-    <div class="container" ng-controller="profesCtrl as profe">
+    <div class="container" ng-controller="firstController as myController">
         <h1>Profesor: </h1>
-        <h4>{{ profe.profesor.nombre }}</h4>
+        <h4>{{ myController.data.name }}</h4>
         <hr>
         <div class="row">
             <!-- Div que contiene la imagen del profesor -->
             <div class="col-sm-3">
                 <section class="panel">
                     <div class="panel-body" align="center">
-                        <img ng-src="{{profe.profesor.foto}}" class="img-circle" alt="" width="150px" height="150px">
+                        <img ng-src="{{myController.data.photo}}" class="img-circle" alt="" width="150px" height="150px">
                     </div>
                 </section>
             </div>
@@ -32,14 +32,13 @@
             <div class="col-sm-9">
                 <section class="panel">
                     <div class="panel-body">
-                        {{ profe.profesor.bio }}
+                        {{ myController.data.biography}}
                         <br>
                         <br>
-                        <strong>Edad:</strong> {{ profe.profesor.edad }} años   
+                        <strong>Edad:</strong> {{ myController.data.age }} años   
                     </div>
                 </section>
             </div>
-    
     
         </div>   
     </div>
