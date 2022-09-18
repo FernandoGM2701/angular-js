@@ -7,6 +7,14 @@ app.controller('firstController', function($scope) {
     $scope.editData = function() {
         angular.copy($scope.data, $scope.inputData);
     }
+
+    $scope.cancelEditData = function() {
+        $scope.inputData = {};
+    }
+
+    $scope.saveEditData = function() {
+        angular.copy($scope.inputData, $scope.data);
+    }
 }); 
 
 var profesorData = {
