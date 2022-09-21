@@ -3,17 +3,21 @@ var app = angular.module('nameApp',[ ]);
 app.controller('firstController', function($scope) {
     $scope.data = profesorData;
     $scope.inputData = {};
+    $scope.showBox = false;
 
     $scope.editData = function() {
         angular.copy($scope.data, $scope.inputData);
+        $scope.showBox = true;
     }
 
     $scope.cancelEditData = function() {
         $scope.inputData = {};
+        $scope.showBox = false;
     }
 
     $scope.saveEditData = function() {
         angular.copy($scope.inputData, $scope.data);
+        $scope.showBox = false;
     }
 }); 
 
