@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="appNgRepeat">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+
+    <!-- Incluir Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- Incluir Animaciones-->
+    <link rel="stylesheet" href="./css/animate.css">
+    
+    <!-- Incluir AngularJS -->
+    <script src="./js/lib/angular.min.js"></script>
+    <script src="./js/app.js"></script>
+</head>
+<body>
+   <div class="container" ng-controller="secondController">
+       <h1>Ng-Repeat</h1>
+
+       <ul>
+           <li ng-repeat="name in listNames">
+                {{ name }}
+           </li>
+           
+       </ul>
+
+       {{ listNames || json }}
+   </div>
+</body>
+</html>
