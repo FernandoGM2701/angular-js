@@ -59,7 +59,7 @@
         <th>Celular</th>
       </tr>
   
-      <tr ng-repeat="person in people | filter:x">
+      <tr ng-repeat="person in people | filter:x | orderBy:'nombre' ">
         <td> <img ng-src="./img/{{ person.avatar }}" class="avatar img-circle"> </td>
         <td> {{ person.nombre }} </td>
         <td> {{ person.sexo }} </td>
