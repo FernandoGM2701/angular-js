@@ -28,6 +28,21 @@
        </ul>
 
        {{ listNames || json }}
+
+       {{ listTeams || json}}
+
+       <table class="table table-striped" >
+            <tr>
+                <th>Name</th>
+                <th>Alias</th>
+                <th>Fundation</th>
+            </tr>
+            <tr ng-repeat="team in listTeams.team">
+                <td> {{ team.name }} </td>
+                <td> {{ team.alias }} </td>
+                <td> {{ team.fundation }} </td>
+            </tr>
+       </table>
    </div>
 </body>
 </html>
