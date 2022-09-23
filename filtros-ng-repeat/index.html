@@ -31,7 +31,21 @@
     <div class="row">
       Búsqueda:
       <br>
-      <input type="text" class="form-control" ng-model="x" placeholder="Ingrese la búsqueda">
+      <input type="text" class="form-control" ng-model="x.nombre" placeholder="Ingrese la búsqueda">
+      <br>
+
+      Sexo:
+      <br>
+      <select ng-model="x.sexo" class="form-control">
+        <option value="">Cualquiera</option>
+        <option value="hombre">Hombre</option>
+        <option value="mujer">Mujer</option>
+      </select>
+      <br>
+
+      Teléfono:
+      <br>
+      <input type="text" class="form-control" ng-model="x.telefono" placeholder="Ingrese el teléfono para la búsqueda">
       <br>
     </div>
     
