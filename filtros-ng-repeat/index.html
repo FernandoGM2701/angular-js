@@ -22,6 +22,9 @@
         width: 75px;
         height: 75px;
       }
+      .puntero {
+        cursor: pointer;
+      }
     </style>
 </head>
 <body>
@@ -53,13 +56,14 @@
     <table class="table table-striped">
       <tr>
         <th>Avatar</th>
-        <th>Nombre</th>
-        <th>Género</th>
+        <th> <a ng-click="columna = 'nombre'; reverse = !reverse;" class="puntero">Nombre</a></th>
+        <th> <a ng-click="columna = 'sexo'; reverse = !reverse;" class="puntero">Género</a></th>
         <th>Teléfono</th>
-        <th>Celular</th>
+        <th>Celular</th>20.
+         
       </tr>
   
-      <tr ng-repeat="person in people | filter:x | orderBy:'-nombre' ">
+      <tr ng-repeat="person in people | filter:x | orderBy:columna:reverse ">
         <td> <img ng-src="./img/{{ person.avatar }}" class="avatar img-circle"> </td>
         <td> {{ person.nombre }} </td>
         <td> {{ person.sexo }} </td>
