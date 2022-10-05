@@ -31,10 +31,17 @@
   <div class="container" ng-controller="ngOptionsController">
       <h1>Ng-Options</h1>
 
-      Selecciones el país:
-      <select ng-model="" class="form-control">
+      Selección del país con ng-repeat: {{ countrySelected }}
+      <select ng-model="countrySelected" class="form-control">
           <option value="">Seleccione</option>
-          <option ng-repeat="country in countries" > {{ country.nombre }} </option>
+          <option ng-repeat="country in countries" value=" {{country.id}} "> {{ country.nombre }} </option>
+      </select>
+
+      <br>
+
+      Selección del país con ng-options:
+      <select ng-model="countrySelected" class="form-control" ng-options="country.id as country.nombre for country in countries" >
+        <option value="" >Seleccione</option>
       </select>
   </div>
 </body>
