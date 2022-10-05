@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="appFilterNgOptions">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Ng Options</title>
+
+    <!-- Incluir Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- Incluir Animaciones-->
+    <link rel="stylesheet" href="./css/animate.css">
+    
+    <!-- Incluir AngularJS -->
+    <script src="./js/lib/angular.min.js"></script>
+
+    <script src="./js/app.js"></script>
+    
+    <style>
+      .avatar {
+        width: 75px;
+        height: 75px;
+      }
+      .puntero {
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body>
+  <div class="container" ng-controller="ngOptionsController">
+      <h1>Ng-Options</h1>
+
+      Selecciones el país:
+      <select ng-model="" class="form-control">
+          <option>Seleccione</option>
+          <option ng-repeat="countrie in countries" > {{ countrie.nombre }} </option>
+      </select>
+  </div>
+</body>
+</html>
