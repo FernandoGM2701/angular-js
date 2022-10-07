@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="appHttpRequest3">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Http Request 3</title>
+
+    <!-- Incluir Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- Incluir Animaciones-->
+    <link rel="stylesheet" href="./css/animate.css">
+    
+    <!-- Incluir AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <script src="./js/app3.js"></script>
+    
+</head>
+<body>
+  <div class="container" ng-controller="httpController3">
+    <h1>HTTP Request 3 - Clima</h1>
+
+    <br>
+
+    Latitud es: {{ clima.coord.lat }}
+    <br>
+    Longitud es: {{ clima.coord.lon }}
+    <br>
+    <br>
+    Amanece a las: {{ clima.sys.sunrise | date: 'HH:mm:ss' }}
+    <br>
+    <br>
+    Se acuesta a las: {{ clima.sys.sunset | date: 'HH:mm:ss' }}
+    <br>
+    <br>
+    El clima es: {{ kelvinToCelcius(clima.main.temp) }}
+    <br>
+    <br>
+
+    {{ clima | json }}
+</body>
+</html>
