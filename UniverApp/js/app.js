@@ -13,3 +13,11 @@ app.controller('mainCtrl', ['$scope', '$http', function($scope, $http) {
   }
 
 }]);
+
+
+// Filtro personalizado de teléfono
+app.filter('telefono', function() {
+  return function(numero) {
+    return numero.substring(0,3) + "-" + numero.substring(3,6) + "-" + numero.substring(6,9);
+  }
+})
